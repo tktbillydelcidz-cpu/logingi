@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control de acesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="contenedor">
+    <h1>iniciar sesion</h1>
+
+    <input type="text" id="usuario" placeholder="Ingrese usuario">
+    <input type="password" id="clave" placeholder="Ingrese contraseña">
+
+    <button onclick="verificar()">Ingresar</button>
+
+    <p id="mensaje"></p>
+</div>
+
+<script>
+function verificar(){
+    let usuario = document.getElementById("usuario").value;
+    let clave = document.getElementById("clave").value;
+
+    if(usuario === "billy" && clave === "1234"){
+        document.getElementById("mensaje").innerHTML = "✅ Acceso permitido";
+        document.getElementById("mensaje").style.color = "green";
+    }else{
+        document.getElementById("mensaje").innerHTML = "❌ Usuario o contraseña incorrectos";
+        document.getElementById("mensaje").style.color = "red";
+    }
+}
+</script>
+</body>
+</html>
